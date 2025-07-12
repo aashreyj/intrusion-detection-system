@@ -1,9 +1,9 @@
 <H1 style="text-align: center;"> CS5.470: Systems and Network Security </H1>
-<H3 style="text-align: center;"> Assignment 3: Network-based Intrusion Detection System </H3>
+<H3 style="text-align: center;"> Network-based Intrusion Detection System </H3>
 
 ## Description
 
-This assignment is an implementation of a Network-based Intrusion Detection System in Python. The user-interface is a menu-driven function that performs the following actions based on the user input:
+This project is an implementation of a Network-based Intrusion Detection System in Python. The user-interface is a menu-driven function that performs the following actions based on the user input:
 
 1. **Start / Stop IDS:** Toggles the IDS thread to start or stop running based on the current state. When the IDS thread is started for the first time, the `ids.log` file is created to store the logging details.
 2. **View Life Traffic:** Creates a new thread to show the user live captured packets from the default network interface.
@@ -31,7 +31,7 @@ This assignment is an implementation of a Network-based Intrusion Detection Syst
 3. Start the main thread using the following command:
 
     ```
-    sudo $(which python3) assignment3.py
+    sudo $(which python3) main.py
     ```
 
 4. To exit, please enter 7 on the menu screen.
@@ -40,7 +40,7 @@ This assignment is an implementation of a Network-based Intrusion Detection Syst
 
 The assignment consists of the following files, each of which serves a single responsibility in the Intrusion Detection System. The following source code files have been submitted:
 
-1. **assignment3.py:** This is the entry point of the program and is responsible for handling the user input and triggering corresponding actions based on the user's choice.
+1. **main.py:** This is the entry point of the program and is responsible for handling the user input and triggering corresponding actions based on the user's choice.
 
     It defines how the user input will be handled and how the logs will be aggregated and shown to the user from the `ids.log` file. It also defines the signal handlers for `SIGINT` and `SIGTSTP` that have special uses in the implementation. The signal handler for `SIGINT` ensures that the user exits the program using the menu option so that all resources can be cleaned up and the termination is graceful.
 
